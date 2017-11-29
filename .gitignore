@@ -195,7 +195,6 @@ $RECYCLE.BIN/
 **/wwwroot/*
 
 # SpecFlow specific
-*.feature.cs
 *.feature.xlsx.*
 *.Specs_*.html
 
