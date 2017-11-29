@@ -20,8 +20,6 @@ build/
 !**/packages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/packages/repositories.config
-!**/packages/NuGet.CommandLine.4.4.1/
-!**/packages/NUnit.Console.3.0.0/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
