@@ -197,7 +197,9 @@ $RECYCLE.BIN/
 # SpecFlow specific
 *.feature.xlsx.*
 *.Specs_*.html
-
+# For html Reports
+**/Reports/*
+**/Screenshots/*
 #####
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
 #####

@@ -33,7 +33,7 @@ namespace PracticeSpecFlowProj.StepDefinition
             //driver.FindElement(By.Id("FirstName")).SendKeys(fName);
             //driver.FindElement(By.Id("MiddleName")).SendKeys(lName);
             Thread.Sleep(1000);
-            Assert.IsTrue(fName.Contains("Hello"));
+           // Assert.IsTrue(fName.Contains("Hello"));
             //Console.WriteLine("Initial :" + initial);
             //Console.WriteLine("FName :" + fName);
             //Console.WriteLine("LName :" + lName);
