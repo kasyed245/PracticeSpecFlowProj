@@ -67,7 +67,6 @@ namespace PracticeSpecFlowProj.Features
         [NUnit.Framework.DescriptionAttribute("User Checking the Registeration Form")]
         [NUnit.Framework.CategoryAttribute("register")]
         [NUnit.Framework.TestCaseAttribute("K", "Hello", "World", null)]
-        [NUnit.Framework.TestCaseAttribute("A", "Jack", "Man", null)]
         public virtual void UserCheckingTheRegisterationForm(string initial, string firstName, string lastName, string[] exampleTags)
         {
             string[] @__tags = new string[] {

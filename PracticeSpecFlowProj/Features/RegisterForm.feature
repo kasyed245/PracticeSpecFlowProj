@@ -10,5 +10,5 @@ Scenario Outline: User Checking the Registeration Form
 Examples: 
     	| Initial | FirstName   | LastName |
 	    | K       | Hello       |   World  |
-	    | A       | Jack        |   Man  |
+#	    | A       | Jack        |   Man  |
  
