@@ -18,20 +18,20 @@ namespace PracticeSpecFlowProj.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("RegisterForm")]
-    public partial class RegisterFormFeature
+    [NUnit.Framework.DescriptionAttribute("RegisterJake")]
+    public partial class RegisterJakeFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "RegisterForm.feature"
+#line 1 "RegisterJake.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "RegisterForm", "\tAs a site user, I want to login to the site so that I can use its functionality", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "RegisterJake", "\tAs a site user, I want to login to the site so that I can use its functionality", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -61,33 +61,6 @@ namespace PracticeSpecFlowProj.Features
         public virtual void ScenarioCleanup()
         {
             testRunner.CollectScenarioErrors();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Checking the Registeration Form With HelloWorld")]
-        [NUnit.Framework.CategoryAttribute("register")]
-        [NUnit.Framework.TestCaseAttribute("K", "Hello", "World", null)]
-        public virtual void CheckingTheRegisterationFormWithHelloWorld(string initial, string firstName, string lastName, string[] exampleTags)
-        {
-            string[] @__tags = new string[] {
-                    "register"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Checking the Registeration Form With HelloWorld", @__tags);
-#line 5
-this.ScenarioSetup(scenarioInfo);
-#line 6
- testRunner.Given("I have navigated to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 7
- testRunner.When(string.Format("I enter intial {0}, FirstName {1} and LastName {2}", initial, firstName, lastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 8
- testRunner.When("I press register button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 9
- testRunner.Then("I should see application main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
         }
     }
 }

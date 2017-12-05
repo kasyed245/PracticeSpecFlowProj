@@ -6,13 +6,9 @@ using System.Text;
 
 namespace SeleniumNUnitProj.main
 {
-   public class Helper
+   public class Helper :WaitCommonClass
     {
-        IWebDriver driver;
-
-        public Helper(IWebDriver driver) {
-            this.driver = driver;
-        } 
+        public Helper(IWebDriver driver) : base(driver) { }
 
         public String GetCurrentWindowHandle()
         {

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>RegisterForm</title>
+    <link rel="stylesheet" href="css/master.css" type="text/css" />
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+$(document).ready(function() {
+  initializeToc();
+});
+</script>
+    <!-- We are using Font Awesome - http://fortawesome.github.com/Font-Awesome - licensed under CC BY 3.0 -->
+  </head>
+  <body>
+    <div id="container">
+      <div id="top" />
+      <div id="toc">
+        <p class="tocCollapser" title="Collapse Table of Content">«</p>
+        <ul class="features">
+          <li class="file" id="root">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="file">
+            <a href="LoginFeature.html">LoginFeature</a>
+            <span class="float-right">
+              <i class="icon-ok passed" title="Successful"> </i>
+            </span>
+          </li>
+          <li class="file">
+            <span class="current">RegisterForm</span>
+            <span class="float-right">
+              <i class="icon-minus-sign failed" title="Failed"> </i>
+            </span>
+          </li>
+          <li class="file">
+            <a href="RegisterJake.html">RegisterJake</a>
+            <span class="float-right">
+              <i class="icon-warning-sign inconclusive" title="Inconclusive"> </i>
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div id="feature">
+        <div class="float-right">
+          <i class="icon-minus-sign failed" title="Failed"> </i>
+        </div>
+        <h1>RegisterForm</h1>
+        <div class="description">
+          <p>As a site user, I want to login to the site so that I can use its functionality</p>
+        </div>
+        <ul id="scenarios">
+          <li class="scenario">
+            <div class="float-right">
+              <i class="icon-minus-sign failed" title="Failed"> </i>
+            </div>
+            <div class="scenario-heading" id="checking-the-registeration-form-with-helloworld">
+              <p class="tags">Tags: <span>@register</span></p>
+              <h2>Checking the Registeration Form With HelloWorld</h2>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>I have navigated to the site</li>
+                <li class="step">
+                  <span class="keyword">When </span>I enter intial &lt;Initial&gt;, FirstName &lt;FirstName&gt; and LastName &lt;LastName&gt;</li>
+                <li class="step">
+                  <span class="keyword">When </span>I press register button</li>
+                <li class="step">
+                  <span class="keyword">Then </span>I should see application main page<span class="comment"># @register<br />#Scenario Outline: Registeration Form with Jack<br />#	Given I have navigated to the site<br />#	When I enter intial &lt;Initial&gt;, FirstName &lt;FirstName&gt; and LastName &lt;LastName&gt;<br />#	When I press register button<br />#	Then I should see application main page<br />#Examples:<br />#    	| Initial | FirstName   | LastName |<br />#	    | A       | Jack        |   Man  |</span></li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('checking-the-registeration-form-with-helloworld')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+            <div>
+              <div class="examples">
+                <h3>Examples: </h3>
+                <div class="table_container">
+                  <table class="datatable">
+                    <thead>
+                      <tr>
+                        <th>Initial</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th> </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>K</td>
+                        <td>Hello</td>
+                        <td>World</td>
+                        <td>
+                          <div class="float-right">
+                            <i class="icon-minus-sign failed" title="Failed"> </i>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="footer">
+        <p>Generated on: 4 December 2017 12:53:04</p>
+        <p>Produced by Pickles, version 2.17.0.0</p>
+      </div>
+    </div>
+  </body>
+</html>

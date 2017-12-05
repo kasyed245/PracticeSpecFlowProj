@@ -9,18 +9,19 @@ using TechTalk.SpecFlow;
 namespace PracticeSpecFlowProj.StepDefinition
 {
     [Binding]
-    public class RegisterFormSteps :Steps
+    public class RegisterFormSteps :BaseStep
     {
-        LoginPage loginPage;
-        MainPage mainPage;
+        //LoginPage loginPage;
+        //MainPage mainPage;
 
-        private IWebDriver driver;
-        public RegisterFormSteps(IWebDriver driver)  {
-            this.driver = driver;
-            loginPage = new LoginPage(driver);
-            mainPage = new MainPage(driver);
+        //private IWebDriver driver;
+        //public RegisterFormSteps(IWebDriver driver)  {
+        //    this.driver = driver;
+        //    loginPage = new LoginPage(driver);
+        //    mainPage = new MainPage(driver);
 
-        }
+        //}
+        public RegisterFormSteps(IWebDriver driver) : base(driver) { }
 
         [When(@"I enter intial (.*), FirstName (.*) and LastName (.*)")]
         public void WhenIEnterIntialKFirstNameHelloAndLastNameWorld(string initial,string fName, string lName)
@@ -38,7 +39,7 @@ namespace PracticeSpecFlowProj.StepDefinition
             //Console.WriteLine("FName :" + fName);
             //Console.WriteLine("LName :" + lName);
             Given("I goto login page");
-           // Thread.Sleep(10000);
+            Thread.Sleep(2000);
             When("I press login button");
         }
 
@@ -48,7 +49,7 @@ namespace PracticeSpecFlowProj.StepDefinition
             Thread.Sleep(1000);
             string fNameTxt = mainPage.FirstNameTxtBox.GetAttribute("value");
             Console.WriteLine("FirstName :" + fNameTxt);
-            //Assert.IsTrue(fNameTxt.Contains("Jack"));
+          //  Assert.IsTrue(fNameTxt.Contains("Jack"));
             Console.WriteLine("** I press Register button ***");
         }
     }

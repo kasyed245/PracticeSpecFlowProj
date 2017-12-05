@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>LoginFeature</title>
+    <link rel="stylesheet" href="css/master.css" type="text/css" />
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+$(document).ready(function() {
+  initializeToc();
+});
+</script>
+    <!-- We are using Font Awesome - http://fortawesome.github.com/Font-Awesome - licensed under CC BY 3.0 -->
+  </head>
+  <body>
+    <div id="container">
+      <div id="top" />
+      <div id="toc">
+        <p class="tocCollapser" title="Collapse Table of Content">«</p>
+        <ul class="features">
+          <li class="file" id="root">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="file">
+            <span class="current">LoginFeature</span>
+            <span class="float-right">
+              <i class="icon-ok passed" title="Successful"> </i>
+            </span>
+          </li>
+          <li class="file">
+            <a href="RegisterForm.html">RegisterForm</a>
+            <span class="float-right">
+              <i class="icon-minus-sign failed" title="Failed"> </i>
+            </span>
+          </li>
+          <li class="file">
+            <a href="RegisterJake.html">RegisterJake</a>
+            <span class="float-right">
+              <i class="icon-warning-sign inconclusive" title="Inconclusive"> </i>
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div id="feature">
+        <div class="float-right">
+          <i class="icon-ok passed" title="Successful"> </i>
+        </div>
+        <h1>LoginFeature</h1>
+        <div class="description">
+          <p>As a site user, I want to login to the site so that I can use its functionality</p>
+        </div>
+        <ul id="scenarios">
+          <li class="scenario">
+            <div class="float-right">
+              <i class="icon-ok passed" title="Successful"> </i>
+            </div>
+            <div class="scenario-heading" id="user-checking-the-login">
+              <p class="tags">Tags: <span>@login</span></p>
+              <h2>User Checking the login</h2>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>I have navigated to the site</li>
+                <li class="step">
+                  <span class="keyword">And </span>I goto login page</li>
+                <li class="step">
+                  <span class="keyword">When </span>I enter following login details<div class="table_container"><table class="datatable"><thead><tr><th>UserName</th><th>Password</th><th> </th></tr></thead><tbody><tr><td>Admin1</td><td>Password1</td></tr><tr><td>Admin2</td><td>Password2</td></tr><tr><td>Admin3</td><td>Password3</td></tr></tbody></table></div></li>
+                <li class="step">
+                  <span class="keyword">When </span>I press login button</li>
+                <li class="step">
+                  <span class="keyword">Then </span>I should see application main page</li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('user-checking-the-login')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="footer">
+        <p>Generated on: 4 December 2017 12:53:04</p>
+        <p>Produced by Pickles, version 2.17.0.0</p>
+      </div>
+    </div>
+  </body>
+</html>

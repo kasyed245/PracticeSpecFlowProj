@@ -8,27 +8,31 @@ using System.Text;
 namespace SeleniumNUnitProj.main
 {
    public class WaitCommonClass
-    {   private static int WAiT_TIME=2;
+    {   private const int WAiT_TIME =10;
+        protected  IWebDriver driver;
 
-        public IWebElement WaitElementToBeVisible(IWebDriver driver, By by)
+        public WaitCommonClass(IWebDriver driver) => this.driver = driver;
+       
+
+        public IWebElement WaitElementToBeVisible(By by,double waitTime= WAiT_TIME)
         {
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(WAiT_TIME));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(waitTime));
             return wait.Until(ExpectedConditions.ElementIsVisible(by));
         }
 
-        public IWebElement WaitElementToBeExists(IWebDriver driver, By by)
+        public IWebElement WaitElementToBeExists(By by)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(WAiT_TIME));
             return wait.Until(ExpectedConditions.ElementExists(by));
         }
 
-        public IWebElement WaitElementToBeClickable(IWebDriver driver, By by)
+        public IWebElement WaitElementToBeClickable(By by)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(WAiT_TIME));
             return wait.Until(ExpectedConditions.ElementToBeClickable(by));
         }
 
-        public IList<IWebElement> waitElementsToBeExist(IWebDriver driver, By by)
+        public IList<IWebElement> waitElementsToBeExist(By by)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(WAiT_TIME));
             return wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(by));

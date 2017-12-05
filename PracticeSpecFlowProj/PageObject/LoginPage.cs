@@ -4,11 +4,19 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using OpenQA.Selenium.Support.PageObjects;
+using PracticeSpecFlowProj.PageObject;
 
 namespace SeleniumNUnitProj.PageObject
 {
-    public class LoginPage //: WaitCommonClass
-    {   [FindsBy(How=How.Name,Using="UserName")]
+    public class LoginPage : BasePage //: WaitCommonClass
+    {
+        //private IWebDriver driver;
+
+        public LoginPage(IWebDriver driver):base(driver)
+        {
+        }
+
+        [FindsBy(How = How.Name, Using = "UserName")]
         public IWebElement UserNameTextBox;
 
         [FindsBy(How = How.Name, Using = "Password")]
@@ -17,12 +25,12 @@ namespace SeleniumNUnitProj.PageObject
         [FindsBy(How = How.XPath, Using = "//form[@id='userName']//input[@name='Login']")]
         public IWebElement LoginButton;
 
-        private IWebDriver driver;
+      
 
-        public LoginPage(IWebDriver driver) {
-            this.driver = driver;
-            PageFactory.InitElements(driver, this);
-        }
+        //public LoginPage(IWebDriver driver) {
+        //    this.driver = driver;
+        //    PageFactory.InitElements(driver, this);
+        //}
 
         //public IWebElement UserNameTextBox() {
         //    return WaitElementToBeVisible(driver, By.Name("UserName"));

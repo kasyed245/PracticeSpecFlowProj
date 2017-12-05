@@ -10,16 +10,16 @@ using SeleniumNUnitProj.PageObject;
 namespace PracticeSpecFlowProj.StepDefinition
 {
     [Binding]
-    public class LoginFeatureSteps : Steps
+    public class LoginFeatureSteps : BaseStep
     {
-        LoginPage loginPage;
-        MainPage mainPage;
-        private IWebDriver driver;
-        public LoginFeatureSteps(IWebDriver driver)  { this.driver = driver;
-           loginPage = new LoginPage(driver);
-           mainPage = new MainPage(driver);
-        }
-
+        //LoginPage loginPage;
+        //MainPage mainPage;
+        //private IWebDriver driver;
+        //public LoginFeatureSteps(IWebDriver driver)  { this.driver = driver;
+        //   loginPage = new LoginPage(driver);
+        //   mainPage = new MainPage(driver);
+        //}
+        public LoginFeatureSteps(IWebDriver driver) : base(driver) { }
         [Given(@"I have navigated to the site")]
         public void GivenIHaveNavigatedToTheSite()
         {

@@ -18,20 +18,21 @@ namespace PracticeSpecFlowProj.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("RegisterForm")]
-    public partial class RegisterFormFeature
+    [NUnit.Framework.DescriptionAttribute("AlertFeature")]
+    public partial class AlertFeatureFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "RegisterForm.feature"
+#line 1 "AlertFeature.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "RegisterForm", "\tAs a site user, I want to login to the site so that I can use its functionality", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "AlertFeature", "\tAs a site user, I want to click on the alert of the site \r\n\tso that I can use it" +
+                    "s functionality", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,28 +65,20 @@ namespace PracticeSpecFlowProj.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Checking the Registeration Form With HelloWorld")]
-        [NUnit.Framework.CategoryAttribute("register")]
-        [NUnit.Framework.TestCaseAttribute("K", "Hello", "World", null)]
-        public virtual void CheckingTheRegisterationFormWithHelloWorld(string initial, string firstName, string lastName, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("User Checking Site Alert")]
+        [NUnit.Framework.CategoryAttribute("alert")]
+        public virtual void UserCheckingSiteAlert()
         {
-            string[] @__tags = new string[] {
-                    "register"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Checking the Registeration Form With HelloWorld", @__tags);
-#line 5
-this.ScenarioSetup(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Checking Site Alert", new string[] {
+                        "alert"});
 #line 6
- testRunner.Given("I have navigated to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 7
- testRunner.When(string.Format("I enter intial {0}, FirstName {1} and LastName {2}", initial, firstName, lastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I have navigated to the site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.When("I press register button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I press the generate button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
- testRunner.Then("I should see application main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I should see the alert", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

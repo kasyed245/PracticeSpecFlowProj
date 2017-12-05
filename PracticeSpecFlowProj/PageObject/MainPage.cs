@@ -4,11 +4,23 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using OpenQA.Selenium.Support.PageObjects;
+using PracticeSpecFlowProj.PageObject;
+using System.Threading;
+
 
 namespace SeleniumNUnitProj.PageObject
 {
-   public class MainPage //: WaitCommonClass
+   public class MainPage : BasePage //: WaitCommonClass
     {
+
+        private IWebDriver driver;
+
+        public MainPage(IWebDriver driver):base(driver)
+        {
+            InitiateHelper();
+            //this.driver = driver;
+            //PageFactory.InitElements(driver, this);
+        }
         [FindsBy(How = How.XPath, Using = "//div[@id='cssmenu']//span[text()='Logout']")]
         public IWebElement LogOutMenuLink;
 
@@ -29,34 +41,40 @@ namespace SeleniumNUnitProj.PageObject
 
         [FindsBy(How = How.Name, Using = "generate")]
         public IWebElement GenerateAlertButton;
+        private By generateAlertBtnBy = By.Name("generate");
 
-
-        private IWebDriver driver;
-
-        public MainPage(IWebDriver driver)
-        {
-            this.driver = driver;
-            PageFactory.InitElements(driver, this);
+        public void PressGenerateAlert() {
+            helper.WaitElementToBeVisible(generateAlertBtnBy);
+         //   GenerateAlertButton.Weclick();
+             GenerateAlertButton.Click();
+            //IAlert alert = helper.SwitchToAlert();
+            //string alertText = alert.Text;
+           // Assert.IsTrue(alertText.Contains("Javascript alert"));
+            //alert.Dismiss();
+            //alertText = alert.Text;
+            ////Assert.IsTrue(alertText.Contains("You pressed Cancel"));
+            //alert.Accept();
+           // Assert.IsTrue(mainPage.MainHeading().Displayed, "Main Page Not Displayed..!");
         }
 
-        //public IWebElement LogOutMenuLink() {
-        //    return WaitElementToBeVisible(driver, By.XPath("//div[@id='cssmenu']//span[text()='Logout']"));
-        //}
+        public string GetAlertText() {
+            Thread.Sleep(2000);
+            IAlert alert = helper.SwitchToAlert();
+            return alert.Text;
+        }
 
-        //public IWebElement MainHeading()
-        //{
-        //    return WaitElementToBeVisible(driver, By.XPath("//body/h1[contains(text(),'Execute Automation')]"));
-        //}
+        public void AcceptAlert()
+        {
+            Thread.Sleep(2000);
+            IAlert alert = helper.SwitchToAlert();
+            alert.Accept();
+        }
 
-        //public IWebElement HtmlPopupLink()
-        //{
-        //    return WaitElementToBeVisible(driver, By.XPath("//form[@id='details']//a[@href='popup.html']"));
-        //}
-
-        //public IWebElement GenerateAlertButton()
-        //{
-        //    return WaitElementToBeVisible(driver, By.Name("generate"));
-        //}
+        public void DismissAlert()
+        {
+            IAlert alert = helper.SwitchToAlert();
+            alert.Dismiss();
+        }
 
     }
 }
